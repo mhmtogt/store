@@ -1,7 +1,7 @@
 import React from 'react'
 import { Outlet,Navigate } from 'react-router-dom'
 import Navbar from "../components/Navbar"
-
+//Routes'UN İÇİNE DİREK OLARAK BİR COMPONENT ÇAĞIRAMAYIZ
  const PrivateRouter = () => {
   return true ?(
   <div>

@@ -2,7 +2,7 @@ import React from 'react'
 
 const Login = () => {
   return (
-    <div>
+    <div className="loginDiv">
         <div>
             <div>
                 <span></span>
@@ -22,7 +22,7 @@ const Login = () => {
                     <input 
                     type="password"
                     name="pass"
-                    placeholder="Enter your password"
+                    placeholder="Enter your Password"
                     required
                      />
                 </div>
