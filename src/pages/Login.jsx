@@ -1,10 +1,22 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
+import { AuthContext } from '../context/AuthProvider'
 
 const Login = () => {
 
-    const handleSubmit=()=>{
+    const {login} = useContext(AuthContext  )
+    const [email,setEmail] = useState("")
+    const [pass, setPass]  = useState("")
 
+    const handleSubmit=(e)=>{
+        e.preventDefault()
+        console.log(email,pass)
+        if(email.toLocaleLowerCase==="admin@aa.com" && pass.toLocaleLowerCase==="admin"){
+            login({email,pass})
+        }else{
+            alert("kullanıcı bilgileri yanlış")
+        }
     }
+    
   return (
     <div className="loginDiv">
         <div className="h-[500px] w-11/12 sm:w-[475px] bg-white rounded-[20px] p-5 flex
@@ -22,21 +34,29 @@ const Login = () => {
                 <div className="flex flex-col gap-2">
                     <label 
                     className="font-montserrat text-label text-labelColor  hover:cursosr-pointer
-                    hover:after:contet-['admin@aa.com'] hover:after:text-black hover:after:pl-3 hover:after:underline"
+                    hover:after:content-['admin@aa.com'] hover:after:text-black hover:after:pl-3 hover:after:underline"
                     htmlFor="email">Email</label>
                     <input 
                     className="login-input"//ortak özellikleri @layer components altında topladık
-                    type="email" placeholder="Enter your Email" required/>
+                    type="email"
+                     placeholder="Enter your Email"
+                     value={email}
+                     onChange={(e)=>setEmail(e.target.value)}
+                      required/>
                 </div>
                 <div className="flex flex-col gap-2">
                     <label
-                    className="font-montserrat text-label text-labelColor hover:cursor-pointer hover:after:contrast-['admin'] hover:after:text-black hover:after:pl-3 hover:after:underline"
+                    className="font-montserrat text-label text-labelColor hover:cursor-pointer hover:after:content-['admin'] hover:after:text-black hover:after:pl-3 hover:after:underline"
                     htmlFor="pass">Password</label>
                     <input
                     className="login-input" 
                     type="password"
                     name="pass"
                     placeholder="Enter your Password"
+                    value={pass}
+                    onChange={(e)=>setPass
+                        (e.target.value)}
+
                     required
                      />
                 </div>
