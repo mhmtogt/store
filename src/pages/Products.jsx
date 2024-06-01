@@ -45,7 +45,9 @@ const Products = () => {
           <Loading/> )
           :products.length ? 
           <div className="card-div">
-            { products.map((item) => <ProductCard/>)} </div>: (
+            { products.map((item) => 
+            <ProductCard key={item.id} item={item}
+            />)} </div>: (
             <h2 className="text-center text-3lx text-red-600"> No Produckts</h2>
           )
         }
