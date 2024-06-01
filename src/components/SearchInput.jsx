@@ -18,6 +18,7 @@ const SearchInput = ( ) => {
         text-gray-100 border border-gray-900 focus:text-black"
         placeholder="Search Products..."
         value={search}
+        autoComplete="off"//öneri çıkmasını engelliyor
         onChange={(e)=>setSearch(e.target.value)}
         />
       </div>
