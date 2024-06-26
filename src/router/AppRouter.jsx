@@ -8,6 +8,7 @@ import ProductDetail from '../pages/ProductDetail'
 import About from '../pages/About'
 import NotFound from '../pages/NotFound'
 import ScrollToTop from '../components/ScroolToTop'
+import Profile from '../pages/Profile'
 
 const AppRouter = () => {
   return (
@@ -18,6 +19,8 @@ const AppRouter = () => {
             <Route path="/" element={<Login/>}/>
             <Route path="/dashboard" element={<PrivateRouter/>}>
                 <Route path="" element={<Home/>}/>
+
+
                 <Route path="/dashboard/products" element={<Products/>}/>
                 <Route path="products/:title" element={<ProductDetail/>}/> {/*burada parametre kullanmak istedim useParams ile bbir şeyler yaklamak istersem bunu kulllancam</Routes> */}
                 {/*bu sayfa için productcard compnentindeki yorumda olan yapıyı açınız*/}
