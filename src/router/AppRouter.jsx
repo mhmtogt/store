@@ -8,7 +8,6 @@ import ProductDetail from '../pages/ProductDetail'
 import About from '../pages/About'
 import NotFound from '../pages/NotFound'
 import ScrollToTop from '../components/ScroolToTop'
-import Profile from '../pages/Profile'
 
 const AppRouter = () => {
   return (
