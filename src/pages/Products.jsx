@@ -16,20 +16,6 @@ const Products = () => {
   //     const { data } = await axios(
   //       `https://dummyjson.com/products/search?q=${search}`
   //     );
-  //     console.log(data);
-  //     setProducts(data.products);
-  //   } catch (error) {
-  //     console.log(error);
-  //   } finally {
-  //     setLoading(false);
-  //   }
-  // };
-  // // useEffect(() => {
-  // //   getData();
-  // // }, []);//!compoentnDidMount yani başlagıçta çalış birdaha çalışma
-  // useEffect(() => {
-  //   getData();
-  // }, [search]); //! search statei değiştikçe getData fonksiyonu çalışsın
 
   const { products, loading } = useProducts();
 
